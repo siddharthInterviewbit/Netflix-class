@@ -1,25 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Row from "./Row";
+// import {a,b} from "./Row";
+//  destructuring
+// {a:{}, b:{}}
 function App() {
+  // console.log(a,b);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Row title="Netflix orignals" name="x"/>
+        <Row title="Movies" name="y"/>
+        <Row title="Tv Shows" name="z"/>
     </div>
   );
 }
 
 export default App;
+
+
+// component in react
+// functional components
+// it returns html 
+// reusable block of code 
+// html written in js is known as JSX
+// App(a)
