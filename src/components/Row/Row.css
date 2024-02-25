@@ -5,7 +5,7 @@
 .row_posters {
     display: flex;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
     padding: 20px;
 }
 
@@ -15,6 +15,10 @@
     margin-right: 10px;
     object-fit: contain;
     transition: transform 450ms;
+}
+
+.row_posterLarge {
+    max-height: 250px;
 }
 
 .row_poster:hover {

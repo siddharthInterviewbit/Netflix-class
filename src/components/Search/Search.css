@@ -1,0 +1,36 @@
+
+.search-input {
+    box-sizing: border-box;
+    padding: 10px 40px 10px 20px;
+    width: 300px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    outline: none;
+    border: 1px solid white;
+  }
+  
+  .search-form {
+    display: flex;
+    height: 30px;
+    position: relative;
+  }
+  
+  .search-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    margin-left: -25px;
+    border: none;
+    color: white;
+    background: transparent;
+  }

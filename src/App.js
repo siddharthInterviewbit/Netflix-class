@@ -1,22 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-import Row from "./Row";
-import requests from './requests';
+import Main from "./components/Main";
+import Nav from "./components/Nav";
+import SearchResults from "./components/SearchResults";
+import { SearchProvider } from './context/SearchContext';
+
 // import {a,b} from "./Row";
 //  destructuring
 // {a:{}, b:{}}
 
 function App() {
+  // state variable 
+  // method to set that state variable
   return (
     <div className="App">
-      <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} />
-      <Row title="Trending" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />    
+      <SearchProvider>
+        <Nav />
+        <Main />
+        <SearchResults />
+      </SearchProvider>
     </div>
   );
 }
@@ -37,4 +38,11 @@ export default App;
 // ajax - asyncronus javascript and xml
 // fetch 
 // axios is a package on top of ajax which gives you a way to do ajax calls on a particular url
+
+
+
+// imports work 
+// import Row from "./components/Row/Row";
+// import Row from "./components/Row/";
+// and find a index.js file in it 
 
