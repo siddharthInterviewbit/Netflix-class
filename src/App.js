@@ -1,8 +1,10 @@
 import './App.css';
-import Main from "./components/Main";
-import Nav from "./components/Nav";
-import SearchResults from "./components/SearchResults";
+
+import Home from './pages/Home/Home';
+import Search from './pages/Search/Search';
+import NotFound from './pages/NotFound/NotFound';
 import { SearchProvider } from './context/SearchContext';
+import { Switch, Route } from "react-router-dom";
 
 // import {a,b} from "./Row";
 //  destructuring
@@ -14,9 +16,11 @@ function App() {
   return (
     <div className="App">
       <SearchProvider>
-        <Nav />
-        <Main />
-        <SearchResults />
+        <Switch>
+          <Route exact={true} path="/" component={Home} />
+          <Route exact={true} path="/search/:query" component={Search} />
+          <Route component={NotFound} />
+        </Switch>
       </SearchProvider>
     </div>
   );

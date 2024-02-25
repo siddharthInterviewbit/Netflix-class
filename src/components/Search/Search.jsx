@@ -7,10 +7,12 @@
 import {useState, useContext} from "react";
 import { useSearch } from "../../context/SearchContext";
 import './Search.css';
+import { useHistory } from 'react-router-dom';
+
 
 function Search() {
   const {search, flag, query, setFlag, setQuery,setResults} = useSearch();
-  
+  const history = useHistory();
 
   const handleChange = (e) => {
     setQuery(e.target.value);
@@ -20,11 +22,13 @@ function Search() {
     setQuery('');
     setFlag(!flag);
     setResults([]);
+    history.push('/');
   }
 
   const handleSubmit = () => {
     if(query) {
       search();
+      history.push(`/search/${encodeURIComponent(query)}`);
     }
   }
 
